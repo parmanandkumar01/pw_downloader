@@ -1,0 +1,428 @@
+--- app.py	2026-03-10 09:09:29.151891049 +0530
++++ "updated /app.py"	2026-03-10 18:08:14.024672704 +0530
+@@ -23,6 +23,7 @@
+ 
+ # ── Standard Library ──────────────────────────────────────────────────────────
+ import os, sys, re, json, time, glob, shutil, socket, queue, threading, hashlib
++import concurrent.futures
+ from datetime import datetime
+ from urllib.parse import urlparse, parse_qs
+ 
+@@ -42,6 +43,16 @@
+ 
+ # ── App directory (same folder as this script) ────────────────────────────────
+ APP_DIR      = os.path.dirname(os.path.abspath(__file__))
++
++def get_resource_path(relative_path):
++    """Get absolute path to resource, works for dev and for PyInstaller"""
++    try:
++        # PyInstaller creates a temp folder and stores path in _MEIPASS
++        base_path = sys._MEIPASS
++    except Exception:
++        base_path = APP_DIR
++    return os.path.join(base_path, relative_path)
++
+ CONFIG_FILE  = os.path.join(APP_DIR, "config.json")
+ HISTORY_FILE = os.path.join(APP_DIR, "download_history.json")
+ QUEUE_FILE   = os.path.join(APP_DIR, "queue.json")
+@@ -58,6 +69,7 @@
+         "resolution"       : "Auto",
+         "prefix"           : "lecture",
+         "selection"        : "all",
++        "parallel_downloads": "1",
+     }
+     def __init__(self):
+         self._d = dict(self.DEFAULTS)
+@@ -88,6 +100,7 @@
+     """Track downloaded URLs (by path hash) to auto-skip re-downloads."""
+     def __init__(self):
+         self._h: dict = {}
++        self._lock = threading.Lock()
+         self.load()
+ 
+     def load(self):
+@@ -98,21 +111,24 @@
+             self._h = {}
+ 
+     def save(self):
+-        try:
+-            with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+-                json.dump(self._h, f, indent=2)
+-        except Exception:
+-            pass
++        with self._lock:
++            try:
++                with open(HISTORY_FILE, "w", encoding="utf-8") as f:
++                    json.dump(self._h, f, indent=2)
++            except Exception:
++                pass
+ 
+     def _key(self, url: str) -> str:
+         base = urlparse(url.split(" ||HEADERS|| ")[0].strip())
+         return hashlib.sha1(f"{base.netloc}{base.path}".encode()).hexdigest()[:16]
+ 
+     def is_downloaded(self, url: str) -> bool:
+-        return self._key(url) in self._h
++        with self._lock:
++            return self._key(url) in self._h
+ 
+     def mark(self, url: str, name: str):
+-        self._h[self._key(url)] = {"name": name, "time": datetime.now().isoformat(timespec="seconds")}
++        with self._lock:
++            self._h[self._key(url)] = {"name": name, "time": datetime.now().isoformat(timespec="seconds")}
+         self.save()
+ 
+ 
+@@ -121,12 +137,16 @@
+ # ══════════════════════════════════════════════════════════════════════════════
+ class QueueState:
+     """Save/load queue.json so downloads resume after a crash."""
++    def __init__(self):
++        self._lock = threading.Lock()
++
+     def save(self, jobs: list):
+-        try:
+-            with open(QUEUE_FILE, "w", encoding="utf-8") as f:
+-                json.dump(jobs, f, indent=2)
+-        except Exception:
+-            pass
++        with self._lock:
++            try:
++                with open(QUEUE_FILE, "w", encoding="utf-8") as f:
++                    json.dump(jobs, f, indent=2)
++            except Exception:
++                pass
+ 
+     def remove(self, url: str, jobs: list):
+         remaining = [j for j in jobs if j.get("url") != url]
+@@ -137,16 +157,18 @@
+         return remaining
+ 
+     def load(self) -> list:
+-        try:
+-            with open(QUEUE_FILE, encoding="utf-8") as f:
+-                return json.load(f)
+-        except Exception:
+-            return []
++        with self._lock:
++            try:
++                with open(QUEUE_FILE, encoding="utf-8") as f:
++                    return json.load(f)
++            except Exception:
++                return []
+ 
+     def clear(self):
+-        if os.path.exists(QUEUE_FILE):
+-            try: os.remove(QUEUE_FILE)
+-            except Exception: pass
++        with self._lock:
++            if os.path.exists(QUEUE_FILE):
++                try: os.remove(QUEUE_FILE)
++                except Exception: pass
+ 
+ 
+ # ══════════════════════════════════════════════════════════════════════════════
+@@ -298,15 +320,19 @@
+         self._queue    = queue.Queue()
+         self._qs       = QueueState()
+         self._hist     = DownloadHistory()
++        self._state_lock = threading.Lock()
++        self._file_lock  = threading.Lock()
+         self._total = self._done = self._failed = 0
++        self._max_workers = 1
+ 
+     # ── Public ─────────────────────────────────────────────────────────────
+-    def start(self, jobs: list, links_file: str = ""):
++    def start(self, jobs: list, links_file: str = "", max_workers: int = 1):
+         if self.is_running(): return
+         self._stop.clear()
+         self._jobs       = list(jobs)
+         self._total      = len(jobs)
+         self._done       = self._failed = 0
++        self._max_workers = max_workers
+         self._overall(0, self._total)
+         self._links_file = links_file
+         self._qs.save(jobs)
+@@ -327,17 +353,22 @@
+ 
+     # ── Internal ───────────────────────────────────────────────────────────
+     def _worker(self):
+-        while not self._queue.empty():
+-            if self._stop.is_set():
+-                self._log("🛑  Queue cancelled by user.", "error")
+-                # count remaining as failed for counter accuracy
+-                while not self._queue.empty():
+-                    self._queue.get_nowait(); self._failed += 1
+-                break
+-            job = self._queue.get()
+-            self._run_job(job)
++        with concurrent.futures.ThreadPoolExecutor(max_workers=self._max_workers) as executor:
++            futures = []
++            while not self._queue.empty():
++                if self._stop.is_set():
++                    self._log("🛑  Queue cancelled by user.", "error")
++                    while not self._queue.empty():
++                        self._queue.get_nowait()
++                        with self._state_lock: self._failed += 1
++                    break
++                job = self._queue.get()
++                futures.append(executor.submit(self._run_job, job))
++            
++            # Wait for all submitted jobs to finish
++            concurrent.futures.wait(futures)
+ 
+-        self._vidprog(None)
++        self._vidprog(None, None)
+         self._update()
+         self._log("━" * 44, "info")
+         self._log("✅  All queued downloads finished.", "success")
+@@ -351,20 +382,23 @@
+         self._log(f"━" * 44, "info")
+         self._log(f"📥  [{idx}/{total}]  {name}", "info")
+         
+-        self._vidprog({"name": name})
++        self._vidprog(name, {"name": name})
+         self._overall(self._done + self._failed, self._total)
+ 
+         # ── Skip: history ────────────────────────────────────────
+         if self._hist.is_downloaded(url):
+             self._log(f"⏭  {name} already in history — skipping.", "warning")
+-            self._done += 1; self._update(); return
++            with self._state_lock: self._done += 1
++            self._update(); return
+ 
+         # ── Skip: file exists ─────────────────────────────────────
+-        expected = os.path.join(odir, f"{re.sub(r'[^\\w\\s-]','',name).strip().replace(' ','_')}.mp4")
++        clean_name = re.sub(r'[^\w\s-]', '', name).strip().replace(' ', '_')
++        expected = os.path.join(odir, f"{clean_name}.mp4")
+         if os.path.exists(expected):
+             self._log(f"⏭  {name} file already exists — skipping.", "warning")
+             self._hist.mark(url, name)
+-            self._done += 1; self._update(); return
++            with self._state_lock: self._done += 1
++            self._update(); return
+ 
+         # ── Expiry check ─────────────────────────────────────────
+         exp = get_expiry_info(url)
+@@ -372,7 +406,8 @@
+             tag = "error" if "EXPIRED" in exp else "warning"
+             self._log(f"⏰  {exp}", tag)
+             if "EXPIRED" in exp:
+-                self._failed += 1; self._update(); return
++                with self._state_lock: self._failed += 1
++                self._update(); return
+ 
+         # ── Network wait ─────────────────────────────────────────
+         if not check_internet():
+@@ -387,56 +422,67 @@
+         for attempt in range(1, self.MAX_RETRIES + 1):
+             if self._stop.is_set(): break
+             if attempt > 1:
+-                self._log(f"🔄  Retry {attempt-1}/{self.MAX_RETRIES-1}…", "warning")
++                self._log(f"🔄  Retry {attempt-1}/{self.MAX_RETRIES-1} ({name})…", "warning")
++
++            cb = lambda info: self._vidprog(name, info)
++            interceptor = ProgressInterceptor(self._log, cb)
++            
++            # Note: stdout replacement here is NOT thread-safe for subprocesses.
++            # Real stdout capturing should be done via subprocess.PIPE which backend
++            # pw_download uses. We only redirect sys.stdout for in-process prints.
++
++            # Simple thread-local stdout proxy hack for prints
++            old_stdout = getattr(threading.local(), 'stdout', sys.stdout)
++            setattr(threading.local(), 'stdout', interceptor)
+ 
+-            interceptor = ProgressInterceptor(self._log, self._vidprog)
+-            old_stdout  = sys.stdout
+-            sys.stdout  = interceptor
+             try:
+                 if pw_download is None:
+                     raise ImportError("pw_download.py not found.")
+                 pw_download.download_video(
+                     url=url, output_name=name, resolution=res,
+                     output_dir=odir, stop_event=self._stop,
+-                    progress_callback=self._vidprog,
++                    progress_callback=cb,
+                 )
+                 success = True
+             except Exception as e:
+-                self._log(f"❌  {e}", "error")
++                self._log(f"❌  {name}: {e}", "error")
+                 if attempt == self.MAX_RETRIES:
+                     self._log(f"💀  All {self.MAX_RETRIES} attempts failed: {name}", "error")
+             finally:
+-                sys.stdout = old_stdout
++                setattr(threading.local(), 'stdout', old_stdout)
+ 
+             if success: break
+ 
+-        if success:
+-            self._done += 1
+-            self._log(f"✅  Completed: {name}", "success")
+-            self._hist.mark(url, name)
+-            self._remove_from_links_file(url)
+-        else:
+-            self._failed += 1
+-
+-        done = self._done + self._failed
+-        self._overall(done, self._total)
+-        self._jobs = self._qs.remove(url, self._jobs)
++        with self._state_lock:
++            if success:
++                self._done += 1
++                self._log(f"✅  Completed: {name}", "success")
++                self._hist.mark(url, name)
++                self._remove_from_links_file(url)
++            else:
++                self._failed += 1
++
++            done = self._done + self._failed
++            self._overall(done, self._total)
++            self._jobs = self._qs.remove(url, self._jobs)
+         self._update()
++        self._vidprog(name, None) # Clear progress card
+ 
+     def _remove_from_links_file(self, url: str):
+         """Remove this URL from the original links.txt file."""
+         if not self._links_file or not os.path.exists(self._links_file):
+             return
+-        try:
+-            with open(self._links_file, encoding="utf-8") as f:
+-                lines = f.readlines()
+-            # Keep lines whose URL part doesn't match
+-            base = url.split(" ||HEADERS|| ")[0].strip()
+-            kept = [l for l in lines if l.strip().split(" ||HEADERS|| ")[0].strip() != base]
+-            with open(self._links_file, "w", encoding="utf-8") as f:
+-                f.writelines(kept)
+-        except Exception:
+-            pass
++        with self._file_lock:
++            try:
++                with open(self._links_file, encoding="utf-8") as f:
++                    lines = f.readlines()
++                # Keep lines whose URL part doesn't match
++                base = url.split(" ||HEADERS|| ")[0].strip()
++                kept = [l for l in lines if l.strip().split(" ||HEADERS|| ")[0].strip() != base]
++                with open(self._links_file, "w", encoding="utf-8") as f:
++                    f.writelines(kept)
++            except Exception:
++                pass
+ 
+     def _update(self):
+         remaining = max(self._total - self._done - self._failed, 0)
+@@ -578,11 +624,17 @@
+         self.title("PW Video Downloader")
+         self.geometry("950x640")
+         self.minsize(860, 580)
++        
++        try:
++            self.iconbitmap(get_resource_path("app_icon.ico"))
++        except Exception as e:
++            pass # Ignore if icon is missing
+ 
+         self._cfg   = ConfigManager()
+         self._hist  = DownloadHistory()
+         self._links : list[str] = []
+         self._preview_win = None
++        self._prog_cards = {}  # Store active cards
+ 
+         self._mgr = DownloadManager(
+             log_cb     = self._log,
+@@ -703,7 +755,18 @@
+ 
+         self._div(sb, r); r += 1
+ 
+-        # Sections 6-12 (buttons + counters)
++        # Section 6 — Parallel Downloads
++        r = self._slabel(sb, r, "⚡ Parallel Downloads")
++        self._parallel_var = tk.StringVar(value="1")
++        ctk.CTkOptionMenu(sb, values=["1", "2", "3", "4", "5"], variable=self._parallel_var, height=32,
++                          fg_color="#1e293b", button_color="#2563eb",
++                          button_hover_color="#1d4ed8", dropdown_fg_color="#0f172a",
++                          font=ctk.CTkFont(size=12)).grid(
++                          row=r, column=0, padx=12, pady=(0,6), sticky="ew"); r += 1
++
++        self._div(sb, r); r += 1
++
++        # Sections 7-12 (buttons + counters)
+         self._start_btn = ctk.CTkButton(sb, text="▶  START DOWNLOAD", height=42,
+                                          font=ctk.CTkFont(size=14, weight="bold"),
+                                          fg_color="#16a34a", hover_color="#15803d",
+@@ -757,9 +820,10 @@
+         for tag, clr in self.TAGS.items():
+             self._log_box._textbox.tag_configure(tag, foreground=clr)
+ 
+-        # Video Progress Card (Section 9)
+-        self._prog_card = VideoProgressCard(p)
+-        self._prog_card.grid(row=2, column=0, sticky="ew", padx=12, pady=(0,6))
++        # Active Downloads Frame (Section 9)
++        self._active_downloads_frame = ctk.CTkScrollableFrame(p, fg_color="#070d18", height=150)
++        self._active_downloads_frame.grid(row=2, column=0, sticky="ew", padx=12, pady=(0,6))
++        self._active_downloads_frame.grid_columnconfigure(0, weight=1)
+ 
+         # Overall progress bar (Section 10)
+         pf = ctk.CTkFrame(p, fg_color="transparent")
+@@ -822,6 +886,7 @@
+         self._res_var.set(self._cfg.get("resolution"))
+         self._pfx_var.set(self._cfg.get("prefix"))
+         self._sel_var.set(self._cfg.get("selection"))
++        self._parallel_var.set(self._cfg.get("parallel_downloads"))
+ 
+     # ── Browse / file loading ─────────────────────────────────────────────────
+     def _browse_links(self):
+@@ -893,17 +958,19 @@
+ 
+         pfx = self._pfx_var.get().strip() or "video"
+         res = self._res_var.get()
++        parallel = int(self._parallel_var.get())
+         self._cfg.set("prefix", pfx); self._cfg.set("resolution", res)
+         self._cfg.set("selection", self._sel_var.get())
++        self._cfg.set("parallel_downloads", str(parallel))
+ 
+         jobs = [{"url": self._links[i-1], "output_name": f"{pfx}_{n:02d}",
+                  "resolution": res, "output_dir": odir, "index": n, "total": len(indices)}
+                 for n, i in enumerate(indices, 1)]
+ 
+-        self._log(f"\n🚀  Starting {len(jobs)} download(s)  [res={res}  prefix={pfx}]", "success")
++        self._log(f"\n🚀  Starting {len(jobs)} download(s)  [res={res}  prefix={pfx}  parallel={parallel}]", "success")
+         self._start_btn.configure(state="disabled")
+         self._stop_btn.configure(state="normal")
+-        self._mgr.start(jobs, links_file=lf)
++        self._mgr.start(jobs, links_file=lf, max_workers=parallel)
+         self._poll()
+ 
+     def _start_jobs(self, jobs: list):
+@@ -943,8 +1010,31 @@
+     def _on_progress(self, info: dict | None):  # for ProgressInterceptor compatibility
+         pass  # individual progress comes via _on_vidprog
+ 
+-    def _on_vidprog(self, info: dict | None):
+-        self.after(0, lambda: self._prog_card.update_progress(info))
++    def _on_vidprog(self, name: str, info: dict | None):
++        def _u():
++            if name is None:
++                # Clear all
++                for card in self._prog_cards.values():
++                    card.destroy()
++                self._prog_cards.clear()
++                return
++
++            if info is None:
++                # Remove specific card
++                if name in self._prog_cards:
++                    self._prog_cards[name].destroy()
++                    del self._prog_cards[name]
++                return
++
++            if name not in self._prog_cards:
++                # Create card
++                card = VideoProgressCard(self._active_downloads_frame)
++                card.pack(fill="x", pady=2)
++                self._prog_cards[name] = card
++
++            self._prog_cards[name].update_progress(info)
++
++        self.after(0, _u)
+ 
+     def _on_overall(self, done: int, total: int):
+         def _u():

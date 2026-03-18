@@ -1,0 +1,495 @@
+[08:21:11] 📂  Loaded 5 valid link(s) from link.txt
+[08:21:11] 
+🚀  Starting 5 download(s)  [res=720p  prefix=lecture  parallel=4]
+[08:21:11] ⚙️  Parallel downloads: 4
+[08:21:11] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:11] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:11] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:11] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:21:11] 📥  [1/5]  lecture_01
+[08:21:11] 📥  [3/5]  lecture_03
+[08:21:11] 📥  [2/5]  lecture_02
+[08:21:11] 📥  [4/5]  lecture_04
+[08:21:11]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:21:11]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:21:11]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:21:11]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:21:11]     [+] CloudFront DASH URL detected
+[08:21:11]     [+] CloudFront DASH URL detected
+[08:21:11]     [+] CloudFront DASH URL detected
+[08:21:11]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_01.mp4
+[08:21:11]     [+] CloudFront DASH URL detected
+[08:21:11]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_03.mp4
+[08:21:11]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_04.mp4
+[08:21:11]     [+] Resolution  : 720p
+[08:21:11]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_02.mp4
+[08:21:11]     [+] Resolution  : 720p
+[08:21:11]     [+] Resolution  : 720p
+[08:21:11]     [→] Trying yt-dlp first...
+[08:21:11]     [→] Trying yt-dlp first...
+[08:21:11]     [→] Trying yt-dlp first...
+[08:21:11]     [+] Resolution  : 720p
+[08:21:11]     [→] Trying yt-dlp first...
+[08:21:12]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=j...MTc3MzIwNzc4N319fV19
+[08:21:12]   [generic] master: Downloading webpage
+[08:21:12]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:21:12]   [generic] master: Downloading webpage
+[08:21:12]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/c7721dab-a926-4c6f-9d8c-07a92d280270/master.mpd?Signature=R...MTc3MzIwNzc2N319fV19
+[08:21:12]   [generic] master: Downloading webpage
+[08:21:12]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:21:12]   [generic] master: Downloading webpage
+[08:21:13]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=lQManAHNp25Jsx3vu5nLZWWC3pqteVkbLcAza70-odRMZMTiSNaWFzp7GzXVO1cokfR2TyDkPJu0GnmRI8AcXS1~v7BQXQ8mQ4qjXmx-DMakrwNvnAFQmeipZW0FHeCVx4qWuL6nTXS1Os9bH4xzefANxarGSmO1qcFfDjp9~i5Tar9VnQ45S4ykV7VfgopcNaSBQ8W7kMtBJJgyvn-oLkyIfUpolgD0yZoZBXJkumvCIptGPhdFkUgW6fg0m5ChuMPzL4LP8gwSDhSC7cH8fxDehye5ICtUfbP8ytHqSiK7G0y68bkfvkGZ4WK60fdH0at3-AimNCHNOUWw1pIB0g__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC8yMzRkODc3Zi01NmQxLTRhOWUtOWM2Mi05ZjEzYzQ3MDExMzMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc3OH19fV19
+[08:21:13]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=qc2CoMkozBN083Q~87Iej6GxGFQwk-1dzJJ-MJvBTKPMsDeojG0yrkG0Q-CxxbMbwk5L8FhJAI0EZ5bvna69qcGCl2swkqB~xugTR6vyObhrNcwHmtGy7EA4nGNO7HIkee96M9SJjyBU~LlkTNWXKhg87gSeiPAfhYHy5XfNtA7NxY~tGeBZO1sF8mfg44WPgvkfqvnmHF7sRnS04ADEtNLqehQ1TYAwLuO419ImE7j~1o2-zFbu5Mjc1~MVBOKo0U~Ms2-gQZ1n2onc1pSaL27I6-7k5GNwC39htQiteWRkKAt84M6Ls84qQl3KE1Puz8AjYOSfLD840zZuGB1~ag__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC9hNzkxNjQ5OS00N2Y0LTQ4MmEtOTI4MS04YTU1NjY2ZDMyZTgvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc1NX19fV19
+[08:21:13]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/c7721dab-a926-4c6f-9d8c-07a92d280270/master.mpd?Signature=RQsU-uSUsW0dDY9dhMB3FB~2kEth~TRpTAVkqFk923p48ImtVgFdkzRx25HOrf6WmAL0Hbi3fKfgyv6lhREAfj~qyom8nLCvwmPBX7uiVe0Q~RGAJ55CkACsHsyxCuY0efuXQV2rQ12WBWro3uONlI9qKaiO8HAAYWiAW2hlTVxvUMAlOXMyb3Z~NdNd9iDpMPpc2UmVfcH~xBF7XJqekj8cqelhGXEW9nER2yI36tO97k3StT9-L9TA6xzBZcRiLj51wcLC4oRii55iOP5vRrtu2k~H0eCmeyl~gbgxTP9vNye446XvMoYoRE3armlct9qUvfILh0ROfE-Rwoagyw__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC9jNzcyMWRhYi1hOTI2LTRjNmYtOWQ4Yy0wN2E5MmQyODAyNzAvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc2N319fV19
+[08:21:13]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/c7721dab-a926-4c6f-9d8c-07a92d280270/master.mpd?Signature=R...MTc3MzIwNzc2N319fV19
+[08:21:13]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:21:13]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:21:13]   [generic] master: Downloading webpage
+[08:21:13]   [generic] master: Downloading webpage
+[08:21:13]   [generic] master: Downloading webpage
+[08:21:13]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=jNzunapEhVeiQq8m-X8L5JkyVFqEriTpg4xGEDu1uCKsQnPPNuaxy-BPKoiWSHTVLo6zQ~v2OGrUZ1i6SLOYfa0uhz8vUo2XANx1C0ic7HhqWELr4kkjwwYlmKum9lSCL41fZtPsWWDw~Xt4E-15Zn0G1izrfJrtM9wIRrpdxTz3xItEFkpyw0aYA-smzYbi-TOhNXkxohu3Lwm70TvawNjLu8dd-SZGtD4qWv3yLccRWPdPIU169bgG7M-GezznHe9Nc9QM4ZrIS6zc-lowEnX2kfpdfJEshFztBOnFj6iWPXbWqcqDZnD2F7ZoIlRA4BlXkEkyuc1ILcAVWKZQCQ__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC81MjIzZDc3Zi0xZTVlLTQ3N2ItOGIzMy0zNjk4MWEwZDNiN2MvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc4N319fV19
+[08:21:13]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=j...MTc3MzIwNzc4N319fV19
+[08:21:13]   [generic] master: Downloading webpage
+[08:21:13]   WARNING: [generic] Falling back on generic information extractor
+[08:21:13]   WARNING: [generic] Falling back on generic information extractor
+[08:21:13]   WARNING: [generic] Falling back on generic information extractor
+[08:21:13]   [generic] master: Extracting information
+[08:21:13]   [generic] master: Extracting information
+[08:21:13]   [generic] master: Extracting information
+[08:21:13]   ERROR: [generic] master: This video is DRM protected
+[08:21:13]   ERROR: [generic] master: This video is DRM protected
+[08:21:13]   WARNING: [generic] Falling back on generic information extractor
+[08:21:13]   ERROR: [generic] master: This video is DRM protected
+[08:21:13]   [generic] master: Extracting information
+[08:21:13]   ERROR: [generic] master: This video is DRM protected
+[08:21:14]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:21:14]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:21:14]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:21:14]     [+] Fetching MPD manifest...
+[08:21:14]     [+] Fetching MPD manifest...
+[08:21:14]     [+] Fetching MPD manifest...
+[08:21:14]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:21:14]     [+] Fetching MPD manifest...
+[08:21:14]     [+] Video stream chosen: 720p
+[08:21:14]     [+] Estimated segments: 3864 video, 1448 audio
+[08:21:14]     [+] Fetching encryption key...
+[08:21:15]     [+] Key: 8d41a8d4e06cf9c3c1187073003ca927
+[08:21:15]     [+] Temp dir: /tmp/pw_cf_dash_310ruv2f
+[08:21:15]     [+] Downloading init segments (video 720p + audio)...
+[08:21:15]     [+] Video stream chosen: 720p
+[08:21:15]     [+] Video stream chosen: 720p
+[08:21:15]     [+] Video stream chosen: 720p
+[08:21:15]     [+] Estimated segments: 3888 video, 1458 audio
+[08:21:15]     [+] Estimated segments: 3848 video, 1442 audio
+[08:21:15]     [+] Fetching encryption key...
+[08:21:15]     [+] Fetching encryption key...
+[08:21:15]     [+] Downloading segments in parallel (8 workers)...
+[08:21:15]     [+] Estimated segments: 3917 video, 1463 audio
+[08:21:15]     [+] Fetching encryption key...
+[08:21:15]     [+] Key: 57659b46f967a18b1b986bc073a4388a
+[08:21:15]     [+] Key: cc787fc47fddc7663f320d7c3664c086
+[08:21:15]     [+] Temp dir: /tmp/pw_cf_dash_ywi2xqi9
+[08:21:15]     [+] Temp dir: /tmp/pw_cf_dash_e4gz9mk_
+[08:21:15]     [+] Key: f9af31810f4f1c97ea238233b8ca919b
+[08:21:15]     [+] Downloading init segments (video 720p + audio)...
+[08:21:15]     [+] Downloading init segments (video 720p + audio)...
+[08:21:15]     [+] Temp dir: /tmp/pw_cf_dash_swscoorj
+[08:21:15]     [+] Downloading init segments (video 720p + audio)...
+[08:21:16]     [+] Downloading segments in parallel (8 workers)...
+[08:21:16]     [+] Downloading segments in parallel (8 workers)...
+[08:21:16]     [+] Downloading segments in parallel (8 workers)...
+[08:33:33]     [+] Downloaded 962/3848 video + 1442/1442 audio segments
+[08:33:33]     [+] Downloaded 966/3864 video + 1448/1448 audio segments
+[08:33:33]     [!] WARNING: Video gaps at segments [967] (possible failed fetch)
+[08:33:33]     [!] WARNING: Video gaps at segments [963] (possible failed fetch)
+[08:33:33]     [+] Concatenating segments...
+[08:33:33]     [+] Concatenating segments...
+[08:33:33] ❌  [Errno 28] No space left on device
+[08:33:33] ❌  [Errno 28] No space left on device
+[08:33:33] 🔄  Retry 1/2… (waiting 2s)
+[08:33:33] 🔄  Retry 1/2… (waiting 2s)
+[08:33:35]     [+] Downloaded 972/3888 video + 1458/1458 audio segments
+[08:33:35]     [!] WARNING: Video gaps at segments [973] (possible failed fetch)
+[08:33:35]     [+] Concatenating segments...
+[08:33:35]     [+] Decrypting with ffmpeg (key=cc787fc47fddc7663f320d7c3664c086)...
+[08:33:35]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:33:35]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:33:35]     [+] CloudFront DASH URL detected
+[08:33:35]     [+] CloudFront DASH URL detected
+[08:33:35]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_01.mp4
+[08:33:35]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_03.mp4
+[08:33:35]     [+] Resolution  : 720p
+[08:33:35]     [→] Trying yt-dlp first...
+[08:33:35]     [+] Resolution  : 720p
+[08:33:35]     [→] Trying yt-dlp first...
+[08:33:36]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:33:36]   [generic] master: Downloading webpage
+[08:33:36]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:33:36]   [generic] master: Downloading webpage
+[08:33:36]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=lQManAHNp25Jsx3vu5nLZWWC3pqteVkbLcAza70-odRMZMTiSNaWFzp7GzXVO1cokfR2TyDkPJu0GnmRI8AcXS1~v7BQXQ8mQ4qjXmx-DMakrwNvnAFQmeipZW0FHeCVx4qWuL6nTXS1Os9bH4xzefANxarGSmO1qcFfDjp9~i5Tar9VnQ45S4ykV7VfgopcNaSBQ8W7kMtBJJgyvn-oLkyIfUpolgD0yZoZBXJkumvCIptGPhdFkUgW6fg0m5ChuMPzL4LP8gwSDhSC7cH8fxDehye5ICtUfbP8ytHqSiK7G0y68bkfvkGZ4WK60fdH0at3-AimNCHNOUWw1pIB0g__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC8yMzRkODc3Zi01NmQxLTRhOWUtOWM2Mi05ZjEzYzQ3MDExMzMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc3OH19fV19
+[08:33:36]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:33:36]   [generic] master: Downloading webpage
+[08:33:36]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=qc2CoMkozBN083Q~87Iej6GxGFQwk-1dzJJ-MJvBTKPMsDeojG0yrkG0Q-CxxbMbwk5L8FhJAI0EZ5bvna69qcGCl2swkqB~xugTR6vyObhrNcwHmtGy7EA4nGNO7HIkee96M9SJjyBU~LlkTNWXKhg87gSeiPAfhYHy5XfNtA7NxY~tGeBZO1sF8mfg44WPgvkfqvnmHF7sRnS04ADEtNLqehQ1TYAwLuO419ImE7j~1o2-zFbu5Mjc1~MVBOKo0U~Ms2-gQZ1n2onc1pSaL27I6-7k5GNwC39htQiteWRkKAt84M6Ls84qQl3KE1Puz8AjYOSfLD840zZuGB1~ag__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC9hNzkxNjQ5OS00N2Y0LTQ4MmEtOTI4MS04YTU1NjY2ZDMyZTgvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc1NX19fV19
+[08:33:36]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:33:36]   [generic] master: Downloading webpage
+[08:33:36]   WARNING: [generic] Falling back on generic information extractor
+[08:33:36]   [generic] master: Extracting information
+[08:33:36]   ERROR: [generic] master: This video is DRM protected
+[08:33:36]   WARNING: [generic] Falling back on generic information extractor
+[08:33:36]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:33:36]     [+] Fetching MPD manifest...
+[08:33:36]   [generic] master: Extracting information
+[08:33:36]   ERROR: [generic] master: This video is DRM protected
+[08:33:37]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:33:37]     [+] Fetching MPD manifest...
+[08:33:37]     [+] Video stream chosen: 720p
+[08:33:37]     [+] Estimated segments: 3848 video, 1442 audio
+[08:33:37]     [+] Fetching encryption key...
+[08:33:37]     [+] Video stream chosen: 720p
+[08:33:37]     [+] Key: f9af31810f4f1c97ea238233b8ca919b
+[08:33:37]     [+] Estimated segments: 3864 video, 1448 audio
+[08:33:37]     [+] Fetching encryption key...
+[08:33:37]     [+] Temp dir: /tmp/pw_cf_dash_hxjoetdc
+[08:33:37]     [+] Downloading init segments (video 720p + audio)...
+[08:33:37]     [+] video decrypted ✓
+[08:33:37]     [+] Key: 8d41a8d4e06cf9c3c1187073003ca927
+[08:33:37]     [+] Temp dir: /tmp/pw_cf_dash_ugseu7n1
+[08:33:37]     [+] Downloading init segments (video 720p + audio)...
+[08:33:37]     [+] Downloading segments in parallel (8 workers)...
+[08:33:37]     [+] Downloading segments in parallel (8 workers)...
+[08:33:37]     [+] audio decrypted ✓
+[08:33:37]     [+] Muxing → /home/parmanand/Desktop/pw_down/lecture_02.mp4
+[08:33:37]     [+] Downloaded 979/3917 video + 1463/1463 audio segments
+[08:33:37]     [!] WARNING: Video gaps at segments [980] (possible failed fetch)
+[08:33:37]     [+] Concatenating segments...
+[08:33:38] ❌  [Errno 28] No space left on device
+[08:33:38] 🔄  Retry 1/2… (waiting 2s)
+[08:33:39]   ✅ Download complete: /home/parmanand/Desktop/pw_down/lecture_02.mp4
+[08:33:39] ✅  Completed: lecture_02
+[08:33:39] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[08:33:39] 📥  [5/5]  lecture_05
+[08:33:39]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:33:39]     [+] CloudFront DASH URL detected
+[08:33:39]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_05.mp4
+[08:33:39]     [+] Resolution  : 720p
+[08:33:39]     [→] Trying yt-dlp first...
+[08:33:40]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:33:40]     [+] CloudFront DASH URL detected
+[08:33:40]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_04.mp4
+[08:33:40]     [+] Resolution  : 720p
+[08:33:40]     [→] Trying yt-dlp first...
+[08:33:40]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=S...MTc3MzIwNzc5NX19fV19
+[08:33:40]   [generic] master: Downloading webpage
+[08:33:40]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=SS7UUle7Db-aaQD9-hWbT5aTv0MznaXwo8zsYgzQNQ7FxpXdT48Dnjphx1gyzZWBno77evGhKxOgvvpoDs~VRlva~9U1LOA0UuKsN~cuVh7dkLgBV5rXBfJKg9hrWlsZ0xXFzsvXKmXTysGYnZAKN-tWKExJdi3Szz1MpN8JVCKBUOcoRra9M0Ref00up0hn99ETTPy17DCfgAMd-zJ1K8epZiANPLCoY-2SZC6QqEBlSxoWeAe27deBMhPIK~QW3kpfiMr-87AqR2bCG23ZD2rhPSqFNAFoEpjBC4noGF66ZPIgBcUfcetaI8mgV0jp4cw9Dc0MjROPo2t4VoGiGg__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC85ZDllMTcyOC0wNTdkLTQyZTQtYmIxZC0zNzZjYWEwODk5M2YvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc5NX19fV19
+[08:33:40]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=S...MTc3MzIwNzc5NX19fV19
+[08:33:40]   [generic] master: Downloading webpage
+[08:33:40]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=j...MTc3MzIwNzc4N319fV19
+[08:33:40]   [generic] master: Downloading webpage
+[08:33:41]   WARNING: [generic] Falling back on generic information extractor
+[08:33:41]   [generic] master: Extracting information
+[08:33:41]   ERROR: [generic] master: This video is DRM protected
+[08:33:41]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=jNzunapEhVeiQq8m-X8L5JkyVFqEriTpg4xGEDu1uCKsQnPPNuaxy-BPKoiWSHTVLo6zQ~v2OGrUZ1i6SLOYfa0uhz8vUo2XANx1C0ic7HhqWELr4kkjwwYlmKum9lSCL41fZtPsWWDw~Xt4E-15Zn0G1izrfJrtM9wIRrpdxTz3xItEFkpyw0aYA-smzYbi-TOhNXkxohu3Lwm70TvawNjLu8dd-SZGtD4qWv3yLccRWPdPIU169bgG7M-GezznHe9Nc9QM4ZrIS6zc-lowEnX2kfpdfJEshFztBOnFj6iWPXbWqcqDZnD2F7ZoIlRA4BlXkEkyuc1ILcAVWKZQCQ__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC81MjIzZDc3Zi0xZTVlLTQ3N2ItOGIzMy0zNjk4MWEwZDNiN2MvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc4N319fV19
+[08:33:41]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/5223d77f-1e5e-477b-8b33-36981a0d3b7c/master.mpd?Signature=j...MTc3MzIwNzc4N319fV19
+[08:33:41]   [generic] master: Downloading webpage
+[08:33:41]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:33:41]     [+] Fetching MPD manifest...
+[08:33:41]   WARNING: [generic] Falling back on generic information extractor
+[08:33:41]   [generic] master: Extracting information
+[08:33:41]     [+] Video stream chosen: 720p
+[08:33:41]   ERROR: [generic] master: This video is DRM protected
+[08:33:41]     [+] Estimated segments: 3698 video, 1383 audio
+[08:33:41]     [+] Fetching encryption key...
+[08:33:41]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:33:41]     [+] Fetching MPD manifest...
+[08:33:42]     [+] Key: 11f58d7b963606db2e0dcbb4146d4396
+[08:33:42]     [+] Temp dir: /tmp/pw_cf_dash_u3idrigs
+[08:33:42]     [+] Downloading init segments (video 720p + audio)...
+[08:33:42]     [+] Video stream chosen: 720p
+[08:33:42]     [+] Estimated segments: 3917 video, 1463 audio
+[08:33:42]     [+] Fetching encryption key...
+[08:33:42]     [+] Downloading segments in parallel (8 workers)...
+[08:33:48]     [+] Key: 57659b46f967a18b1b986bc073a4388a
+[08:33:48]     [+] Temp dir: /tmp/pw_cf_dash_y4n_z59d
+[08:33:48]     [+] Downloading init segments (video 720p + audio)...
+[08:33:49]     [+] Downloading segments in parallel (8 workers)...
+[08:43:32]     [+] Downloaded 925/3698 video + 1383/1383 audio segments
+[08:43:32]     [!] WARNING: Video gaps at segments [926] (possible failed fetch)
+[08:43:32]     [+] Concatenating segments...
+[08:43:32]     [+] Decrypting with ffmpeg (key=11f58d7b963606db2e0dcbb4146d4396)...
+[08:43:33] ❌  ffmpeg video decryption failed:
+680e9c0] Terminating thread with return code -28 (No space left on device)
+[out#0/mp4 @ 0x55814680e9c0] Error writing trailer: No space left on device
+[out#0/mp4 @ 0x55814680e9c0] Error closing file: No space left on device
+[out#0/mp4 @ 0x55814680e9c0] video:207360KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=84378 fps=0.0 q=-1.0 Lsize=  207104KiB time=00:46:52.80 bitrate= 603.2kbits/s speed=6.04e+03x elapsed=0:00:00.46    
+Conversion failed!
+
+[08:43:33] 🔄  Retry 1/2… (waiting 2s)
+[08:43:35]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:43:35]     [+] CloudFront DASH URL detected
+[08:43:35]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_05.mp4
+[08:43:35]     [+] Resolution  : 720p
+[08:43:35]     [→] Trying yt-dlp first...
+[08:43:35]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=S...MTc3MzIwNzc5NX19fV19
+[08:43:35]   [generic] master: Downloading webpage
+[08:43:35]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=SS7UUle7Db-aaQD9-hWbT5aTv0MznaXwo8zsYgzQNQ7FxpXdT48Dnjphx1gyzZWBno77evGhKxOgvvpoDs~VRlva~9U1LOA0UuKsN~cuVh7dkLgBV5rXBfJKg9hrWlsZ0xXFzsvXKmXTysGYnZAKN-tWKExJdi3Szz1MpN8JVCKBUOcoRra9M0Ref00up0hn99ETTPy17DCfgAMd-zJ1K8epZiANPLCoY-2SZC6QqEBlSxoWeAe27deBMhPIK~QW3kpfiMr-87AqR2bCG23ZD2rhPSqFNAFoEpjBC4noGF66ZPIgBcUfcetaI8mgV0jp4cw9Dc0MjROPo2t4VoGiGg__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC85ZDllMTcyOC0wNTdkLTQyZTQtYmIxZC0zNzZjYWEwODk5M2YvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc5NX19fV19
+[08:43:35]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/9d9e1728-057d-42e4-bb1d-376caa08993f/master.mpd?Signature=S...MTc3MzIwNzc5NX19fV19
+[08:43:35]   [generic] master: Downloading webpage
+[08:43:35]   WARNING: [generic] Falling back on generic information extractor
+[08:43:35]   [generic] master: Extracting information
+[08:43:35]   ERROR: [generic] master: This video is DRM protected
+[08:43:36]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:43:36]     [+] Fetching MPD manifest...
+[08:43:36]     [+] Video stream chosen: 720p
+[08:43:36]     [+] Estimated segments: 3698 video, 1383 audio
+[08:43:36]     [+] Fetching encryption key...
+[08:43:36]     [+] Key: 11f58d7b963606db2e0dcbb4146d4396
+[08:43:36]     [+] Temp dir: /tmp/pw_cf_dash__253xwy9
+[08:43:36]     [+] Downloading init segments (video 720p + audio)...
+[08:43:36]     [+] Downloading segments in parallel (8 workers)...
+[08:43:42]     [+] Downloaded 962/3848 video + 1442/1442 audio segments
+[08:43:42]     [!] WARNING: Video gaps at segments [963] (possible failed fetch)
+[08:43:42]     [+] Concatenating segments...
+[08:43:42]     [+] Decrypting with ffmpeg (key=f9af31810f4f1c97ea238233b8ca919b)...
+[08:43:42]     [+] Downloaded 966/3864 video + 1448/1448 audio segments
+[08:43:42]     [!] WARNING: Video gaps at segments [967] (possible failed fetch)
+[08:43:42]     [+] Concatenating segments...
+[08:43:43] ❌  [Errno 28] No space left on device
+[08:43:43] 🔄  Retry 2/2… (waiting 5s)
+[08:43:43] ❌  ffmpeg video decryption failed:
+8dbf8000] Terminating thread with return code -28 (No space left on device)
+[out#0/mp4 @ 0x55a68dbf8000] Error writing trailer: No space left on device
+[out#0/mp4 @ 0x55a68dbf8000] Error closing file: No space left on device
+[out#0/mp4 @ 0x55a68dbf8000] video:40192KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=14919 fps=0.0 q=-1.0 Lsize=   39936KiB time=00:08:17.50 bitrate= 657.6kbits/s speed=4.59e+03x elapsed=0:00:00.10    
+Conversion failed!
+
+[08:43:43] 🔄  Retry 2/2… (waiting 5s)
+[08:43:48]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:43:48]     [+] CloudFront DASH URL detected
+[08:43:48]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_01.mp4
+[08:43:48]     [+] Resolution  : 720p
+[08:43:48]     [→] Trying yt-dlp first...
+[08:43:48]     [+] CloudFront CDN URL — using CloudFront downloader
+[08:43:48]     [+] CloudFront DASH URL detected
+[08:43:48]     [+] Output      : /home/parmanand/Desktop/pw_down/lecture_03.mp4
+[08:43:48]     [+] Resolution  : 720p
+[08:43:48]     [→] Trying yt-dlp first...
+[08:43:48]     [+] Downloaded 979/3917 video + 1463/1463 audio segments
+[08:43:48]     [!] WARNING: Video gaps at segments [980] (possible failed fetch)
+[08:43:48]     [+] Concatenating segments...
+[08:43:48]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:43:48]   [generic] master: Downloading webpage
+[08:43:48]     [+] Decrypting with ffmpeg (key=57659b46f967a18b1b986bc073a4388a)...
+[08:43:48]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:43:48]   [generic] master: Downloading webpage
+[08:43:48]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=lQManAHNp25Jsx3vu5nLZWWC3pqteVkbLcAza70-odRMZMTiSNaWFzp7GzXVO1cokfR2TyDkPJu0GnmRI8AcXS1~v7BQXQ8mQ4qjXmx-DMakrwNvnAFQmeipZW0FHeCVx4qWuL6nTXS1Os9bH4xzefANxarGSmO1qcFfDjp9~i5Tar9VnQ45S4ykV7VfgopcNaSBQ8W7kMtBJJgyvn-oLkyIfUpolgD0yZoZBXJkumvCIptGPhdFkUgW6fg0m5ChuMPzL4LP8gwSDhSC7cH8fxDehye5ICtUfbP8ytHqSiK7G0y68bkfvkGZ4WK60fdH0at3-AimNCHNOUWw1pIB0g__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC8yMzRkODc3Zi01NmQxLTRhOWUtOWM2Mi05ZjEzYzQ3MDExMzMvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc3OH19fV19
+[08:43:48]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/234d877f-56d1-4a9e-9c62-9f13c4701133/master.mpd?Signature=l...MTc3MzIwNzc3OH19fV19
+[08:43:48]   [generic] master: Downloading webpage
+[08:43:49]   [redirect] Following redirect to https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=qc2CoMkozBN083Q~87Iej6GxGFQwk-1dzJJ-MJvBTKPMsDeojG0yrkG0Q-CxxbMbwk5L8FhJAI0EZ5bvna69qcGCl2swkqB~xugTR6vyObhrNcwHmtGy7EA4nGNO7HIkee96M9SJjyBU~LlkTNWXKhg87gSeiPAfhYHy5XfNtA7NxY~tGeBZO1sF8mfg44WPgvkfqvnmHF7sRnS04ADEtNLqehQ1TYAwLuO419ImE7j~1o2-zFbu5Mjc1~MVBOKo0U~Ms2-gQZ1n2onc1pSaL27I6-7k5GNwC39htQiteWRkKAt84M6Ls84qQl3KE1Puz8AjYOSfLD840zZuGB1~ag__&Key-Pair-Id=APKAXVKMENFCRKTG5XE2&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMWQzNHA4dno2M29pcS5jbG91ZGZyb250Lm5ldC9hNzkxNjQ5OS00N2Y0LTQ4MmEtOTI4MS04YTU1NjY2ZDMyZTgvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzIwNzc1NX19fV19
+[08:43:49]   [generic] Extracting URL: https://d1d34p8vz63oiq.cloudfront.net/a7916499-47f4-482a-9281-8a55666d32e8/master.mpd?Signature=q...MTc3MzIwNzc1NX19fV19
+[08:43:49]   [generic] master: Downloading webpage
+[08:43:49]   WARNING: [generic] Falling back on generic information extractor
+[08:43:49]   [generic] master: Extracting information
+[08:43:49]   ERROR: [generic] master: This video is DRM protected
+[08:43:49]   WARNING: [generic] Falling back on generic information extractor
+[08:43:49]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:43:49]     [+] Fetching MPD manifest...
+[08:43:49]   [generic] master: Extracting information
+[08:43:49]   ERROR: [generic] master: This video is DRM protected
+[08:43:49]     [!] yt-dlp failed (exit 1) — falling back to manual DASH downloader...
+[08:43:49]     [+] Fetching MPD manifest...
+[08:43:49]     [+] Video stream chosen: 720p
+[08:43:49]     [+] Estimated segments: 3848 video, 1442 audio
+[08:43:49]     [+] Fetching encryption key...
+[08:43:49]     [+] Video stream chosen: 720p
+[08:43:49]     [+] Estimated segments: 3864 video, 1448 audio
+[08:43:49]     [+] Fetching encryption key...
+[08:43:49]     [+] Key: f9af31810f4f1c97ea238233b8ca919b
+[08:43:49]     [+] Temp dir: /tmp/pw_cf_dash_k0fzi8ix
+[08:43:49]     [+] Downloading init segments (video 720p + audio)...
+[08:43:49]     [+] Key: 8d41a8d4e06cf9c3c1187073003ca927
+[08:43:49]     [+] Temp dir: /tmp/pw_cf_dash_4n6nxpdg
+[08:43:49]     [+] Downloading init segments (video 720p + audio)...
+[08:43:49]     [+] video decrypted ✓
+[08:43:50]     [+] Downloading segments in parallel (8 workers)...
+[08:43:50]     [+] Downloading segments in parallel (8 workers)...
+[08:43:50]     [+] audio decrypted ✓
+[08:43:50]     [+] Muxing → /home/parmanand/Desktop/pw_down/lecture_04.mp4
+[08:43:52]   ✅ Download complete: /home/parmanand/Desktop/pw_down/lecture_04.mp4
+[08:43:52] ✅  Completed: lecture_04
+[08:48:54] ⏹  Stop signal sent — waiting for current download to finish…
+[08:48:55] ❌  Stopped by user.
+[08:48:55] 💀  All 3 attempts failed: lecture_01
+[08:48:55] 🛑  Queue cancelled by user.
+[08:48:55] ❌  Stopped by user.
+[08:48:55] 💀  All 3 attempts failed: lecture_03
+[08:48:55] ❌  Stopped by user.
+[08:48:55] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:15:27] 📂  Loaded 7 valid link(s) from os.txt
+[15:15:27] 
+🚀  Starting 7 download(s)  [res=480p  prefix=os_by_khalil_sir  parallel=4]
+[15:15:27] ⚙️  Parallel downloads: 4
+[15:15:27] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:15:27] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:15:27] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:15:27] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[15:15:27] 📥  [1/7]  os_by_khalil_sir_01
+[15:15:27] 📥  [3/7]  os_by_khalil_sir_03
+[15:15:27] 📥  [2/7]  os_by_khalil_sir_02
+[15:15:27] 📥  [4/7]  os_by_khalil_sir_04
+[15:15:29]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[15:15:29]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[15:15:29]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[15:15:29]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[15:23:34] ⏹  Stop signal sent — waiting for current download to finish…
+[15:24:17] 
+  [+] Concatenating segments...
+[15:24:19]   [+] Decrypting with ffmpeg (key=d88f240989bd21159274016759a47b4a)...
+[15:24:25]   [+] Muxing → /home/parmanand/Desktop/pw_down/os_by_khalil_sir_01.mp4
+[15:24:29] ✅ Download complete: /home/parmanand/Desktop/pw_down/os_by_khalil_sir_01.mp4
+[15:24:29] ✅  Completed: os_by_khalil_sir_01
+[15:24:29] 🛑  Queue cancelled by user.
+[15:24:44] 
+  [+] Concatenating segments...
+[15:24:46]   [+] Decrypting with ffmpeg (key=fe6b11d3fd19ae86c3f168f5eb13aad3)...
+[15:24:48] 
+  [+] Concatenating segments...
+[15:24:49] 
+  [+] Concatenating segments...
+[15:24:50]   [+] Decrypting with ffmpeg (key=50c197f6a12164cb4a14ab569417ca81)...
+[15:24:51]   [+] Decrypting with ffmpeg (key=9b90d352149eb3b68139bd251c87032a)...
+[15:24:53]   [+] Muxing → /home/parmanand/Desktop/pw_down/os_by_khalil_sir_04.mp4
+[15:25:00] ✅ Download complete: /home/parmanand/Desktop/pw_down/os_by_khalil_sir_04.mp4
+[15:25:00] ✅  Completed: os_by_khalil_sir_04
+[15:25:01]   [+] Muxing → /home/parmanand/Desktop/pw_down/os_by_khalil_sir_03.mp4
+[15:25:01]   [+] Muxing → /home/parmanand/Desktop/pw_down/os_by_khalil_sir_02.mp4
+[15:25:07] ✅ Download complete: /home/parmanand/Desktop/pw_down/os_by_khalil_sir_03.mp4
+[15:25:07] ✅  Completed: os_by_khalil_sir_03
+[15:25:08] ✅ Download complete: /home/parmanand/Desktop/pw_down/os_by_khalil_sir_02.mp4
+[15:25:09] ✅  Completed: os_by_khalil_sir_02
+[15:25:09] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:42:09] 📂  Loaded 13 valid link(s) from toc_ch1.txt
+[20:42:09] ⚠️   Removed 1 invalid line(s).
+[20:42:09] 
+🚀  Starting 13 download(s)  [res=480p  prefix=toc_by_RBR_15  parallel=4]
+[20:42:09] ⚙️  Parallel downloads: 4
+[20:42:09] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:42:09] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:42:09] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:42:09] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:42:09] 📥  [4/13]  toc_by_RBR_15_04
+[20:42:09] 📥  [1/13]  toc_by_RBR_15_01
+[20:42:09] 📥  [2/13]  toc_by_RBR_15_02
+[20:42:09] 📥  [3/13]  toc_by_RBR_15_03
+[20:42:11]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:42:11]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:42:12]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:42:12]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:48:57] 
+  [+] Concatenating segments...
+[20:48:59]   [+] Decrypting with ffmpeg (key=4d2a98f47af94bac58cefcbe9947d0e4)...
+[20:49:04]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_01.mp4
+[20:49:05] 
+  [+] Concatenating segments...
+[20:49:06]   [+] Decrypting with ffmpeg (key=bc68424dd609c537f9781f65ed0f6e60)...
+[20:49:10] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_01.mp4
+[20:49:10] ✅  Completed: toc_by_RBR_15_01
+[20:49:10] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:49:10] 📥  [5/13]  toc_by_RBR_15_05
+[20:49:12]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:49:13]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_02.mp4
+[20:49:16] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_02.mp4
+[20:49:16] ✅  Completed: toc_by_RBR_15_02
+[20:49:17] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:49:17] 📥  [6/13]  toc_by_RBR_15_06
+[20:49:19]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:50:54] 
+  [+] Concatenating segments...
+[20:50:55]   [+] Decrypting with ffmpeg (key=bd1bfb6d3fa77f12b22189d3b0b63887)...
+[20:51:01]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_04.mp4
+[20:51:04] 
+  [+] Concatenating segments...
+[20:51:05]   [+] Decrypting with ffmpeg (key=88492adcd40b13e54be72b5b50b09bf0)...
+[20:51:07] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_04.mp4
+[20:51:07] ✅  Completed: toc_by_RBR_15_04
+[20:51:07] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:51:07] 📥  [7/13]  toc_by_RBR_15_07
+[20:51:10]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:51:13]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_03.mp4
+[20:51:17] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_03.mp4
+[20:51:18] ✅  Completed: toc_by_RBR_15_03
+[20:51:18] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:51:18] 📥  [8/13]  toc_by_RBR_15_08
+[20:51:20]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:56:06] 
+  [+] Concatenating segments...
+[20:56:08]   [+] Decrypting with ffmpeg (key=5df3569ab9bb4b1154df312b18906abd)...
+[20:56:13]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_06.mp4
+[20:56:18] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_06.mp4
+[20:56:18] ✅  Completed: toc_by_RBR_15_06
+[20:56:18] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:56:18] 📥  [9/13]  toc_by_RBR_15_09
+[20:56:20]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:56:24] 
+  [+] Concatenating segments...
+[20:56:26]   [+] Decrypting with ffmpeg (key=89de1f217a59d2f373c6b84fd2444b67)...
+[20:56:32]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_05.mp4
+[20:56:36] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_05.mp4
+[20:56:36] ✅  Completed: toc_by_RBR_15_05
+[20:56:36] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:56:36] 📥  [10/13]  toc_by_RBR_15_10
+[20:56:38]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:56:45] 
+  [+] Concatenating segments...
+[20:56:46]   [+] Decrypting with ffmpeg (key=effb6f57ba6843791599bcd9e177189a)...
+[20:56:51]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_08.mp4
+[20:56:54] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_08.mp4
+[20:56:55] ✅  Completed: toc_by_RBR_15_08
+[20:56:55] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:56:55] 📥  [11/13]  toc_by_RBR_15_11
+[20:56:57]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:58:39] 
+  [+] Concatenating segments...
+[20:58:39]   [+] Decrypting with ffmpeg (key=88dc3414913f28a00bbd5bd3aae3adce)...
+[20:58:46]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_07.mp4
+[20:58:50] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_07.mp4
+[20:58:51] ✅  Completed: toc_by_RBR_15_07
+[20:58:51] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:58:51] 📥  [12/13]  toc_by_RBR_15_12
+[20:58:53]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[20:59:08] 
+  [+] Concatenating segments...
+[20:59:08]   [+] Decrypting with ffmpeg (key=f9c90ac0014b5b716a0b042df07fe188)...
+[20:59:10]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_11.mp4
+[20:59:11] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_11.mp4
+[20:59:11] ✅  Completed: toc_by_RBR_15_11
+[20:59:11] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[20:59:12] 📥  [13/13]  toc_by_RBR_15_13
+[20:59:13]   [!] yt-dlp failed (exit 1) — falling back to manual DASH...
+[21:01:22] 
+  [+] Concatenating segments...
+[21:01:22]   [+] Decrypting with ffmpeg (key=806267fd93bb3fd5bd5255d54d3fa21a)...
+[21:01:26]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_10.mp4
+[21:01:29] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_10.mp4
+[21:01:29] ✅  Completed: toc_by_RBR_15_10
+[21:02:31] 
+  [+] Concatenating segments...
+[21:02:32]   [+] Decrypting with ffmpeg (key=6df6aeb90a3a21ac43d3896cf013b2b9)...
+[21:02:36]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_09.mp4
+[21:02:40] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_09.mp4
+[21:02:40] ✅  Completed: toc_by_RBR_15_09
+[21:03:46] 
+  [+] Concatenating segments...
+[21:03:48]   [+] Decrypting with ffmpeg (key=3b14555a52bac091435c2ddee7ee8518)...
+[21:03:52]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_12.mp4
+[21:03:55] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_12.mp4
+[21:03:55] ✅  Completed: toc_by_RBR_15_12
+[21:04:04] 
+  [+] Concatenating segments...
+[21:04:05]   [+] Decrypting with ffmpeg (key=be57b463f10a35e65fc457214a4a3d75)...
+[21:04:10]   [+] Muxing → /home/parmanand/Desktop/pw_down/toc_by_RBR_15_13.mp4
+[21:04:13] ✅ Download complete: /home/parmanand/Desktop/pw_down/toc_by_RBR_15_13.mp4
+[21:04:13] ✅  Completed: toc_by_RBR_15_13
+[21:04:13] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[21:04:13] ✅  All queued downloads finished.
